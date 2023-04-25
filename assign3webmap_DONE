@@ -92,7 +92,7 @@
 
    <div id='map'></div>
   
-  /* container for the description panel of the points and data */
+  // container for the description panel of the points and data.
       <div class="descriptionPanel" id="descriptionPanel" style="height: 250px;">
      <span onClick=panelSelect() id="glyph" class="chevron glyphicon glyphicon-chevron-down"></span>
      <hr/>
