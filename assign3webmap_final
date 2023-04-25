@@ -16,7 +16,7 @@
      color: white;
    }
 
-/* style for heading level 4 tags */
+  /* style for heading level 4 tags */
    h4 {
      color: white;
      margin-left: 10px;
@@ -84,23 +84,23 @@
    }
 
      </style>
- </head>
- <body>
+</head>
+<body>
 
-<div id='map'></div>
+ <div id='map'></div>
      
      /* div below is a container for all the display information about our map and data sources */
-<div class="descriptionPanel" id="descriptionPanel" style="height:           250px;">
+ <div class="descriptionPanel" id="descriptionPanel" style="height:           250px;">
      <span onClick=panelSelect() id="glyph" class="chevron glyphicon glyphicon-chevron-down"></span>
      <hr/>
      <h4>WHAT AM I LOOKING AT?</h4>
      <p style="margin-left: 10px; margin-right: 10px;">
        This is a map showing every single person in the Portland Area as a dot. Data is taken from the 2017 US Census, and is accurate at the level of a block, however within each block location is randomized. Points are colored based on the number home owners versus renters on a block.
      </p>
-</div>
+ </div>
    
      /* container for the owner and renter legend */
-<div class="LegendContainer">
+ <div class="LegendContainer">
      <div class="legendItem">
          <span class="owner">&#11044;</span>
          <span class="layerDescription">Owners</span>
@@ -109,7 +109,7 @@
          <span class="renter">&#11044;</span>
          <span class="layerDescription">Renters</span>
      </div>
-</div>
+ </div>
      
 <script>
      mapboxgl.accessToken = 'pk.eyJ1IjoibWF4aW1qMzMiLCJhIjoiY2xnY3h6dTI5MjYyMTNsbGlzN245ZGpyayJ9.wcC0U-gJadafLW2PFKdlng'; 
