@@ -64,19 +64,15 @@
        transform: translate(50%, 50%);
    }
         
-
    /* style for items with the class "layerDescription" */
    .layerDescription {
      color: white;
      padding-left: 10px;
    }
-
-        
-   .renter {
-         color:#cc1100;
+       
+   .renter {color:#cc1100;
    }
-   .owner{
-         color:#00b4e6;
+   .owner{color:#00b4e6;
    }
 
    /* style for items with the class "chevron" which is the arrow on the legend */
@@ -91,7 +87,7 @@
  </head>
  <body>
 
-   <div id='map'></div>
+<div id='map'></div>
      
      /* div below is a container for all the display information about our map and data sources */
 <div class="descriptionPanel" id="descriptionPanel" style="height:           250px;">
@@ -101,7 +97,8 @@
      <p style="margin-left: 10px; margin-right: 10px;">
        This is a map showing every single person in the Portland Area as a dot. Data is taken from the 2017 US Census, and is accurate at the level of a block, however within each block location is randomized. Points are colored based on the number home owners versus renters on a block.
      </p>
-   </div>
+</div>
+   
      /* container for the owner and renter legend */
 <div class="LegendContainer">
      <div class="legendItem">
@@ -112,9 +109,9 @@
          <span class="renter">&#11044;</span>
          <span class="layerDescription">Renters</span>
      </div>
-   </div>
+</div>
      
-   <script>
+<script>
      mapboxgl.accessToken = 'pk.eyJ1IjoibWF4aW1qMzMiLCJhIjoiY2xnY3h6dTI5MjYyMTNsbGlzN245ZGpyayJ9.wcC0U-gJadafLW2PFKdlng'; 
      var map = new mapboxgl.Map({
          container: 'map', // container id
@@ -139,6 +136,6 @@
         }
       }
     
-   </script>
+ </script>
  </body>
  </html>
