@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Points of Geopolitical Interest in the Arctic Circle</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    
+
+    
+</style>
+</head>
+<body>
+<style>
+    #map {
+        position: fixed;
+        width: 50%;
+    }
+    #features {
+        width: 50%;
+        margin-left: 50%;
+        font-family: 'Arimo', sans-serif;
+        overflow-y: scroll;
+        background-color: #fafafa;
+    }
+    section {
+        padding: 25px 50px;
+        line-height: 25px;
+        border-bottom: 1px solid #ddd;
+        opacity: 0.25;
+        font-size: 13px;
+    }
+    section.active {
+        opacity: 1;
+    }
+    section:last-child {
+        border-bottom: none;
+        margin-bottom: 200px;
+    }
+
+</style>
+
+<div id="map"></div>
+    
+<div id="features">
+    <section id="intro" class="active">
+        <h1>Hot Politics in a Cold World</h1>
+        <h5>Project by Maxim Johnson</h5>
+        <p>
+            Our climate has been dramatically warming ever since the age of industrialization. This rapid change of our environment is caused by our constant consumption and production of resources. Now as we have started to warm the planet, we turn to the Arctic circle, and its opening waters as ice melts. The Arctic circle does not have a set latitude as it shifts with the tilt of the Earth, but it is agreed that its latitude sits at about 66.5 degrees north. This area used to be reliably inundated with sea ice, but as temperatures continue to rise, this may no longer be the case.
+        </p>
+        
+        <img src="danzcolor9109.jpg" alt="A political cartoon drawing of a US soldier patrolling the arctic for seals, the caption reads melting arctic waters means northern borders move farther." width="500">
+        
+        <small id="citation">
+            Source:
+            <a href="https://www.danzigercartoons.com/cartoons/melting-arctic-waters">Danziger</a>
+        </small>
+        <p>
+            Some of the most important discussions around what to do in the Arctic have already begun, with many powerful Arctic stakeholders pushing to seize newly available gas, oil, fishing, and mineral resources. These stakeholders, such as Canada, the United States, and Russia, are shifting their priorities to these opening Arctic lands and ensuring that their national interests are met in the region. Through an exploration of the region we can identify who some of the biggest stakeholders are, what resources are considered the most valuable, where these resources are located, and why these geopolitical stakeholders are prioritizing these resources. This will hopefully offer some perspective into the issues which primarily affect this region.
+
+        </p>
+        <small id="citation">
+            Explore the Arctic Council - a cooperative forum of Arctic stakeholders:
+            <a href="https://arctic-council.org/">Arctic Council</a>
+        </small>
+    </section>
+    
+    <section id="arctic">
+        <h3>How is the Arctic changing?</h3>
+        <p>
+            The Arctic’s sea ice area this year was about 10,600,000 square kilometers. The maximum area in 1982 sat at around 12,100,000 square kilometers, with a mean of 11,100,000 square kilometers over the forty-four years between 1979 to 2023. Overall Arctic sea ice area has been steadily decreasing, causing new areas to be exposed in the Arctic. Some noticeable examples include areas along Greenlands coasts which were previously covered by ice sheets or glaciers.
+        </p>
+        <p>
+            The total amount of sea ice returning each winter is decreasing as well, leaving less and less ice for the next season. Much of the older ice within the Arctic has disappeared, leaving younger and newly formed sea ice.
+        </p>
+        <small id="citation">
+            Source:
+            <a href="https://earth.gsfc.nasa.gov/cryo/data/current-state-sea-ice-cover">NASA Earth Sciences</a>
+        </small>
+    </section>
+    
+    <section id="eez">
+        <h3>Economic Exclusivity Zones</h3>
+        <p>
+            According to the UN Convention on the Law of the Sea, every state is entitled to 200 nautical miles of territory surrounding their coastlines. This gives each state the power to exert control over these waters, effectively extending their countries territories. Any resources such as oil and gas, minerals, and even fishing are subject to the laws of the country under which waters jurisdiction you sail in. This 200 nautical mile zone from coastline to ocean is called the economic exclusivity zone or EEZ. 
+        </p>
+        <p>
+            These zones work similar to country borders but are much more theoretical. Unlike terrestrial borders which often follow landforms or can be enforced militarily, EEZs have no borders except for the lines politicians draw. This of course has led to plenty of disputes with famous examples including the nine dash line declared by China in the South China Sea.
+        </p>
+        <img src="eezarcticmap.png" alt="A map showing the claims of Russia, Canada, Denmark, the US, and Norway in the Arctic sea." width="500">
+        
+        <small id="citation">
+            Source:
+            <a href="http://arcticopportunity.org/cms/site-content/uploads/2015/01/Arctic-map-960x650.png">Durham University</a>
+        </small>
+        
+        <p>
+            Today countries are using the rights of EEZs to enforce claims over resources which are now becoming available in the arctic. You can learn more about how EEZs look like currently in the Arctic, and where major disputes and claims are being held. Let's look at how claims on oil and gas, minerals, shipping, and fishing within the Arctic may be affected by melting sea ice.
+
+        </p>
+        <small id="citation">
+            For further information:
+            <a href="https://www.durham.ac.uk/research/institutes-and-centres/ibru-borders-research/maps-and-publications/maps/arctic-maps-series/">Durham University,</a>
+            <a href="https://www.britannica.com/topic/exclusive-economic-zone">Encyclopedia Britannica</a>
+        </small>
+    </section>
+    
+    <section id="alaska">
+        <h3>America and the Arctic</h3>
+        <p>
+            The US Energy Information Administration had the following to say about the US’ primary Arctic territory and state, Alaska:
+        </p>
+        <p>
+            “Alaska's proved crude oil reserves—about 3.2 billion barrels at the beginning of 2022—are the fourth-largest in the nation. Alaska was among the top five oil-producing states for many years. The state moved up from sixth place in 2020 to fourth in 2021 and 2022, even though its annual oil production was the lowest in more than 45 years at 437,000 barrels per day.” <a href="https://www.eia.gov/state/analysis.php?sid=AK">Alaskan Energy Estimates</a>
+        </p>
+        <p>
+            As the Arctic continues to warm, Alaska’s potential as a top oil exporter only increases. This is apparent as President Biden recently approved the Willow Project, a massive oil drilling venture being undertaken by ConocoPhillips. Taking place in the National Petroleum Reserve in Alaska, a federally owned area of land, the company hopes to make use of the estimated 600 million barrels of oil. President Biden has also announced limitations on oil prospecting into the Arctic and Beaufort seas, for now, as the US focuses its Arctic oil efforts on Alaskan soil.
+        </p>
+        <small id="citation">
+            For further information: 
+            <a href="https://www.npr.org/2023/03/12/1163003146/alaska-drilling-protections-biden">NPR,</a>
+            <a href="https://www.cnn.com/2023/03/14/politics/willow-project-oil-alaska-explained-climate/index.html">CNN</a>
+        </small>
+    </section>
+   
+    <section id="canada">
+        <h3>Canada and the Arctic</h3>
+        <p>
+            Compared to American oil interests Canada has put environmental protection first. In 2016 the Canadian government had placed a ban on new offshore oil and gas drilling licenses. The ban was extended indefinitely this year, showing the Canadian government's dedication to environmental protection. This ban comes through despite numerous surveys showing Canada possesses potentially massive amounts of oil and gas reserves. Nonetheless the Canadian government hopes to secure environmental interests, and look for industry in the Arctic through alternative means.
+
+        </p>
+        <img src="northwestpassageUSNIC.png" alt="A map created by the United States National Ice center displaying northern Canada and the potential northwestern passage which could pass through its waters. The map shows the extent of Arctic sea ice which inhibits ship travel." width="500">
+        
+        <small id="citation">
+            Source:
+            <a href="https://usicecenter.gov/Products/ArcticPeriodic">USNIC</a>
+        </small>
+        
+        <p>
+            One of these potential industries as sea ice melts is shipping. As it continues to warm in the Arctic the maximum extent of sea ice continues to shrink, with the sheet coming close to disappearing during the summer. This enables less specialized ships to pass through – more importantly cargo ships.This passage, known as the Northwest passage, cuts through the Arctic and could cut down drastically on global shipping times, thrusting Canada into a geopolitical spotlight similar to Panama’s canal or Egypt’s Suez canal. This would only be accomplished once the absence of sea ice is more reliable in the region, though this may be closer than many think.
+
+        </p>   
+        <small id="citation">
+            For further information:
+            <a href="https://www.cbc.ca/news/canada/north/arcitc-offshore-drilling-restrictions-extending-1.6699833">CBC,</a>
+            <a href="https://www.thearcticinstitute.org/hedging-bets-oil-gas-canadian-arctic/">Arctic Institute</a>
+        </small>
+    </section>
+    
+    
+    <section id="russia">
+        <h3>Russia and the Arctic</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <img src="northernsearoute.png" alt="A map created by the United States National Ice center displaying northern Russia and the potential northern passage which could pass through its waters. The map shows the extent of Arctic sea ice which inhibits ship travel." width="500">
+        
+        <small id="citation">
+            Source:
+            <a href="https://usicecenter.gov/Products/ArcticPeriodic">USNIC</a>
+        </small>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <small id="citation">
+            Adapted from
+            <a href="http://www.gutenberg.org/files/2346/2346-h/2346-h.htm">Project Gutenberg</a>
+        </small>
+    </section>
+    
+    <section id="greenland">
+        <h3>Greenland and the Arctic</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <img src=".png" alt="description" width="500">
+        
+        <small id="citation">
+            Source:
+            <a href="link">USNIC</a>
+        </small>
+        
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <small id="citation">
+            Adapted from
+            <a href="http://www.gutenberg.org/files/2346/2346-h/2346-h.htm">Project Gutenberg</a>
+        </small>
+    </section>
+    
+    <section id="review">
+        <h3>What is in store for Arctic Geopolitics?</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. illum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <small id="citation">
+            Adapted from
+            <a href="http://www.gutenberg.org/files/2346/2346-h/2346-h.htm">Project Gutenberg,</a>
+            <a href="https://www.britannica.com/topic/exclusive-economic-zone">Encyclopedia Britannica</a>
+        </small>
+    </section>
+    
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoibWF4aW1qMzMiLCJhIjoiY2xnNWZpdHU0MDJ4djNsbGl3OXE1dDNtaSJ9.7ll-iqYuVLauwXP-hI722A';
+    const map = new mapboxgl.Map({
+        container: 'map',
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+        style: 'mapbox://styles/maximj33/cliakgf9e005s01o81sgg9naf',
+        center: [0,90],
+        zoom: 2,
+        bearing: 27,
+        pitch: 20
+    });
+    
+   map.on('load', function() {
+       map.addLayer({
+        id: 'Owner Data',
+        type: "fill",
+          source: {
+            type: 'vector',
+            url: 'maximj33.dw04fey3'  //input your tileset ID url e.g. 'mapbox://jomerson.6ykhlovc' 
+          },
+            'source-layer': 'nic_autoc2023155n_pl_a-3071fq', //input your source layer name e.g. 'Owner-Renter-Pop-ca08iw' - color below determines opacity
+          paint: {
+                 'fill-color':
+                   ["step",
+                    ["get", "Own"],
+                    "#ecda9a"],
+                   "fill-opacity": 0.7 
+               }       
+
+        });
+    });
+    
+    const chapters = {
+        'intro': {
+            duration: 6000,
+            bearing: 27,
+            center: [0, 90],
+            zoom: 2,
+            pitch: 20
+        },
+        'arctic': {
+            duration: 6000,
+            center: [0, 90],
+            bearing: 27,
+            zoom: 2,
+            pitch: 20
+        },
+        'eez': {
+            duration: 6000,
+            bearing: 90,
+            center: [0, 90],
+            zoom: 2.2,
+            pitch: 0
+        },
+        'alaska': {
+            duration: 6000,
+            bearing: 27,
+            center: [-155, 70.27739905087613],
+            zoom: 3.7, 
+            pitch: 20
+            
+        },
+        
+        'canada': {
+            duration: 6000,
+            bearing: 27,
+            center: [-121, 72.0575047648369],
+            zoom: 3,
+            pitch: 20
+        },
+        
+        'russia': {
+            duration: 6000,
+            bearing: 20,
+            center: [93, 80],
+            zoom: 2.5,
+            pitch: 30
+        },
+    
+        'greenland': {
+            duration: 6000,
+            bearing: 27,
+            center: [-44, 66],
+            zoom: 3,
+            pitch: 20
+        },
+    
+        'review': {
+            duration: 6000,
+            bearing: 27,
+            center: [0, 90],
+            zoom: 2,
+            pitch: 20
+        }
+    };
+
+
+    let activeChapterName = 'alaska';
+    function setActiveChapter(chapterName) {
+        if (chapterName === activeChapterName) return;
+
+        map.flyTo(chapters[chapterName]);
+
+        document.getElementById(chapterName).classList.add('active');
+        document.getElementById(activeChapterName).classList.remove('active');
+
+        activeChapterName = chapterName;
+    }
+
+    function isElementOnScreen(id) {
+        const element = document.getElementById(id);
+        const bounds = element.getBoundingClientRect();
+        return bounds.top < window.innerHeight && bounds.bottom > 0;
+    }
+
+    // On every scroll event, check which element is on screen
+    window.onscroll = () => {
+        for (const chapterName in chapters) {
+            if (isElementOnScreen(chapterName)) {
+                setActiveChapter(chapterName);
+                break;
+            }
+        }
+    };
+    
+</script>
+
+</body>
+</html>
