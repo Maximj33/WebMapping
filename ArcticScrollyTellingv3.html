@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <title>Points of Geopolitical Interest in the Arctic Circle</title>
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+   
+    
+</head>
+<body>
+<style>
+    
+    /* style for the map and text */
+        body { margin: 0; padding: 0; }
+        #map { position: fixed; top: 0; bottom: 0; width: 50%; }
+
+            map {
+                position: fixed;
+                width: 50%;
+            }
+            #features {
+                width: 50%;
+                margin-left: 50%;
+                font-family: 'Arimo', sans-serif;
+                overflow-y: scroll;
+                background-color: #fafafa;
+            }
+            section {
+                padding: 25px 50px;
+                line-height: 25px;
+                border-bottom: 1px solid #ddd;
+                opacity: 0.25;
+                font-size: 13px;
+            }
+            section.active {
+                opacity: 1;
+            }
+            section:review {
+                border-bottom: none;
+                margin-bottom: 200px;
+            }
+
+            /*  style for items with the class "LegendContainer" */
+           .LegendContainer {
+             position: fixed;
+             bottom: 20px;
+             left: 20px;
+             z-index: 2;
+             height: 50px;
+             background: rgba(0, 0, 0, 0.12);
+             transition: width 2s, height 2s; /* this is the time it takes for the container to transition */
+             border-radius: 7px;
+           }
+
+
+           /* style for items with the class "legendItem" */
+           .legendItem {
+               margin: 0px;
+               padding-left: 10px;
+               display:inline-block;
+               margin:auto;
+               padding-right: 10px;
+           }
+
+           /* style for items with the class "layerDescription" */
+           .layerDescription {
+             color: white;
+             padding-left: 10px;
+           }
+           
+           .Arctictoday{color:#407d91;}
+           .economic{color:#f2b701;}
+           .arcticpast{color:#3d606c;}
+           .NPRAlaska{color:#b786c1;}
+    
+    
+</style>
+
+        <div id="map"></div>
+
+        <div class="LegendContainer">
+         <div class="legendItem">
+             <span class="Arctictoday">&#11044;</span>
+             <span class="layerDescription">Arctic Ice Extent in Sep 2022</span>
+         </div>
+
+         <div class="legendItem">
+             <span class="economic">&#11044;</span>
+             <span class="layerDescription">Economic Exclusivity Zone</span>
+        </div>
+        <br>
+        <div class="legendItem">
+             <span class="arcticpast">&#11044;</span>
+             <span class="layerDescription">Arctic Ice Extent in Sep 2010</span>
+         </div>
+
+        <div class="legendItem">
+             <span class="NPRAlaska">&#11044;</span>
+             <span class="layerDescription">National Petroleum Reserve</span>
+         </div>
+
+       </div>
+    
+<div id="features">
+    <section id="intro" class="active">
+        <h1>Hot Politics in a Cold World</h1>
+        <h5>Project by Maxim Johnson</h5>
+        <p>
+            Our climate has been dramatically warming ever since the age of industrialization. This rapid change of our environment is caused by our constant consumption and production of resources. Now as we have started to warm the planet, we turn to the Arctic circle, and its opening waters as ice melts. The Arctic circle does not have a set latitude as it shifts with the tilt of the Earth, but it is agreed that its latitude sits at about 66.5 degrees north. This area used to be reliably inundated with sea ice, but as temperatures continue to rise, this may no longer be the case.
+        </p>
+        
+        <img src="danzcolor9109.jpg" alt="A political cartoon drawing of a US soldier patrolling the arctic for seals, the caption reads melting arctic waters means northern borders move farther." class="responsive" width="500">
+        
+        <small id="citation">
+            Source:
+            <a href="https://www.danzigercartoons.com/cartoons/melting-arctic-waters" target="_blank">Danziger</a>
+        </small>
+        <p>
+            Some of the most important discussions around what to do in the Arctic have already begun, with many powerful Arctic stakeholders pushing to seize newly available gas, oil, fishing, and mineral resources. These stakeholders, such as Canada, the United States, and Russia, are shifting their priorities to these opening Arctic lands and ensuring that their national interests are met in the region. Through an exploration of the region we can identify who some of the biggest stakeholders are, what resources are considered the most valuable, where these resources are located, and why these geopolitical stakeholders are prioritizing these resources. This will hopefully offer some perspective into the issues which primarily affect this region.
+
+        </p>
+        <small id="citation">
+            Explore the Arctic Council - a cooperative forum of Arctic stakeholders:
+            <a href="https://arctic-council.org/" target="_blank">Arctic Council</a>
+        </small>
+    </section>
+    
+    <section id="arctic">
+        <h3>How is the Arctic changing?</h3>
+        <p>
+            The Arctic’s sea ice area this year was about 10,600,000 square kilometers. The maximum area in 1982 sat at around 12,100,000 square kilometers, with a mean of 11,100,000 square kilometers over the forty-four years between 1979 to 2023. Overall Arctic sea ice area has been steadily decreasing, causing new areas to be exposed in the Arctic. Some noticeable examples include areas along Greenlands coasts which were previously covered by ice sheets or glaciers.
+        </p>
+        <p>
+            The total amount of sea ice returning each winter is decreasing as well, leaving less and less ice for the next season. Much of the older ice within the Arctic has disappeared, leaving younger and newly formed sea ice.
+        </p>
+        <small id="citation">
+            Source:
+            <a href="https://earth.gsfc.nasa.gov/cryo/data/current-state-sea-ice-cover" target="_blank">NASA Earth Sciences</a>
+        </small>
+    </section>
+    
+    <section id="eez">
+        <h3>Economic Exclusivity Zones</h3>
+        <p>
+            According to the UN Convention on the Law of the Sea, every state is entitled to 200 nautical miles of territory surrounding their coastlines. This gives each state the power to exert control over these waters, effectively extending their countries territories. Any resources such as oil and gas, minerals, and even fishing are subject to the laws of the country under which waters jurisdiction you sail in. This 200 nautical mile zone from coastline to ocean is called the economic exclusivity zone or EEZ. 
+        </p>
+        <p>
+            These zones work similar to country borders but are much more theoretical. Unlike terrestrial borders which often follow landforms or can be enforced militarily, EEZs have no borders except for the lines politicians draw. This of course has led to plenty of disputes with famous examples including the nine dash line declared by China in the South China Sea.
+        </p>
+        <img src="eezarcticmap.png" alt="A map showing the claims of Russia, Canada, Denmark, the US, and Norway in the Arctic sea." class="responsive" width="500">
+        
+        <small id="citation">
+            Source:
+            <a href="http://arcticopportunity.org/cms/site-content/uploads/2015/01/Arctic-map-960x650.png" target="_blank">Map by Durham University</a>
+        </small>
+        
+        <p>
+            Today countries are using the rights of EEZs to enforce claims over resources which are now becoming available in the arctic. You can learn more about how EEZs look like currently in the Arctic, and where major disputes and claims are being held. Let's look at how claims on oil and gas, minerals, shipping, and fishing within the Arctic may be affected by melting sea ice.
+
+        </p>
+        <small id="citation">
+            For further information:
+            <a href="https://www.durham.ac.uk/research/institutes-and-centres/ibru-borders-research/maps-and-publications/maps/arctic-maps-series/" target="_blank">Durham University,</a>
+            <a href="https://www.britannica.com/topic/exclusive-economic-zone" target="_blank">Encyclopedia Britannica</a>
+        </small>
+    </section>
+    
+    <section id="alaska">
+        <h3>America and the Arctic</h3>
+        <p>
+            The US Energy Information Administration had the following to say about the US’ primary Arctic territory and state, Alaska:
+        </p>
+        <p>
+            “Alaska's proved crude oil reserves—about 3.2 billion barrels at the beginning of 2022—are the fourth-largest in the nation. Alaska was among the top five oil-producing states for many years. The state moved up from sixth place in 2020 to fourth in 2021 and 2022, even though its annual oil production was the lowest in more than 45 years at 437,000 barrels per day.” <a href="https://www.eia.gov/state/analysis.php?sid=AK" target="_blank">Alaskan Energy Estimates</a>
+        </p>
+        <p>
+            As the Arctic continues to warm, Alaska’s potential as a top oil exporter only increases. This is apparent as President Biden recently approved the Willow Project, a massive oil drilling venture being undertaken by ConocoPhillips. Taking place in the National Petroleum Reserve in Alaska, a federally owned area of land, the company hopes to make use of the estimated 600 million barrels of oil. President Biden has also announced limitations on oil prospecting into the Arctic and Beaufort seas, for now, as the US focuses its Arctic oil efforts on Alaskan soil.
+        </p>
+        <small id="citation">
+            For further information: 
+            <a href="https://www.npr.org/2023/03/12/1163003146/alaska-drilling-protections-biden" target="_blank">NPR,</a>
+            <a href="https://www.cnn.com/2023/03/14/politics/willow-project-oil-alaska-explained-climate/index.html" target="_blank">CNN</a>
+        </small>
+    </section>
+   
+    <section id="canada">
+        <h3>Canada and the Arctic</h3>
+        <p>
+            Compared to American oil interests Canada has put environmental protection first. In 2016 the Canadian government had placed a ban on new offshore oil and gas drilling licenses. The ban was extended indefinitely this year, showing the Canadian government's dedication to environmental protection. This ban comes through despite numerous surveys showing Canada possesses potentially massive amounts of oil and gas reserves. Nonetheless the Canadian government hopes to secure environmental interests, and look for industry in the Arctic through alternative means.
+
+        </p>
+        <img src="northwestpassageUSNIC.png" alt="A map created by the United States National Ice center displaying northern Canada and the potential northwestern passage which could pass through its waters. The map shows the extent of Arctic sea ice which inhibits ship travel." class="responsive" width="500">
+        
+        <small id="citation">
+            Source:
+            <a href="https://usicecenter.gov/Products/ArcticPeriodic" target="_blank">Map by USNIC</a>
+        </small>
+        
+        <p>
+            One of these potential industries as sea ice melts is shipping. As it continues to warm in the Arctic the maximum extent of sea ice continues to shrink, with the sheet coming close to disappearing during the summer. This enables less specialized ships to pass through – more importantly cargo ships.This passage, known as the Northwest passage, cuts through the Arctic and could cut down drastically on global shipping times, thrusting Canada into a geopolitical spotlight similar to Panama’s canal or Egypt’s Suez canal. This would only be accomplished once the absence of sea ice is more reliable in the region, though this may be closer than many think.
+
+        </p>   
+        <small id="citation">
+            For further information:
+            <a href="https://www.cbc.ca/news/canada/north/arcitc-offshore-drilling-restrictions-extending-1.6699833" target="_blank">CBC,</a>
+            <a href="https://www.thearcticinstitute.org/hedging-bets-oil-gas-canadian-arctic/" target="_blank">Arctic Institute</a>
+        </small>
+    </section>
+    
+    
+    <section id="russia">
+        <h3>Russia and the Arctic</h3>
+        <p>
+            Russia has become synonymous with the Arctic due to its extensive northern territories. These include areas such as Siberia which sit well into the Arctic oil. These areas are typically covered in snow, ice, and permafrost making any resource extraction extremely difficult in the region. This does not stop the Eurasian superpower from possessing some of the largest oil and gas extraction operations in the world. Siberia offers enormous amounts of oil and gas due to the West Siberian Petroleum Basin, the largest hydrocarbon basin in the world, which is estimated to hold over 140 billion barrels of oil and 1,300 trillion cubic feet of gas. This combined with the presence of other basins such as the Timan-Pechora basin makes Russia a top oil producer in the world. As arctic conditions warm, access to these regions will only improve.
+        </p>
+        <img src="map_russia-oil-gordon.png" alt="A map showing russian oil and gas production throughout the country" class="responsive" width="500">
+        
+        <small id="citation">
+            Source:
+            <a href="https://carnegieendowment.org/publications/interactive/russia-oil-map/" target="_blank">Map by Carnegie Endowment</a>
+        </small>
+        <p>
+            Despite this fact many countries have cut off trading and placed sanctions on Russia as soon as the Russo-Ukrainian War began. On top of these military and political pressure has been placed on Russia through NATO support of Ukraine. Many of Russia’s top oil consumers such as Germany sanctioned and limited consumption. This has only caused Russia to steadily limit access within the last year, placing many European countries in a tight spot. This has forced Russia to consider its place in the global market and shift its strategy as it hopes to survive amidst western sanctions. This has appeared in many different forms.
+        </p>
+        <p>
+            These pressures have resulted in Russia's interaction with the Arctic to be associated with a few main goals. As ice melts the Russians hope to secure the EEZ along its northern coast. There have even been attempts to extend it to the continental shelf, granting Russia even more territory. This is important as Russia also hopes to secure a reliable route through the arctic, also known as the northern sea route.
+        </p>
+        <img src="northernsearoute.png" alt="A map created by the United States National Ice center displaying northern Russia and the potential northern passage which could pass through its waters. The map shows the extent of Arctic sea ice which inhibits ship travel." class="responsive" width="500">
+        
+        <small id="citation">
+            Source:
+            <a href="https://usicecenter.gov/Products/ArcticPeriodic" target="_blank">Map by USNIC</a>
+        </small>
+        <p>
+           This northern sea route would only improve Russia’s hold on arctic and global geopolitics. As mentioned before, Arctic routes offer shorter distances than going through the Suez or Panama canals. If Russia can establish an Arctic route through its EEZs, then they could enforce tolls and taxes, creating another point of income for the nation. These shipping routes would only increase its importance in global change, but could also strengthen its hold over Arctic resources as shipping has better access to the Arctic sea.
+        </p>
+        <small id="citation">
+            For further information:
+            <a href="https://pubs.usgs.gov/bul/2201/G/" target="_blank">USGS,</a>
+            <a href="https://www.bbc.com/news/world-europe-60131520" target="_blank">BBC,</a>
+            <a href="http://www.gutenberg.org/files/2346/2346-h/2346-h.htm" target="_blank">The Economist</a>
+        </small>
+    </section>
+    
+    <section id="greenland">
+        <h3>Greenland and the Arctic</h3>
+        <p>
+            Unlike the other geopolitical actors we have looked at so far, Greenland does not hold a major global position. Only with melting Arctic ice is its importance on the global stage increasing. This is due to a few reasons but some of the most important reasons revolve around potential new resources. As Greenland’s ice sheets melt away, new potential industries are being uncovered. A few examples include sand for the cement industry, tourist destinations, new arctic fisheries, and minerals available under Greenland’s surface. Currently Greenland benefits from fishing and tourism, but resource extraction could dramatically increase its funds.
+        </p>
+        <img src="greenlandvillage.jpg" alt="An image showing a greenlandic village covered in snow by the ocean" class="responsive" width="500">
+        
+        <small id="citation">
+            Source:
+            <a href="https://pictureofthedayblog.wordpress.com/2017/06/17/30-epic-picture-that-prove-greenland-has-the-most-inspiring-landscapes/" target="_blank">Picture of the Day</a>
+        </small>
+        
+        <p>
+            All of these new resources thrust the Danish territory into new conversations. Greenland possesses numerous rare earth minerals which are valuable in various industries such as automotive vehicles and renewable energy technology (such as wind turbines). This has caused major actors such as the US and China to improve their efforts and relations with Greenland, hoping to tap its potential.
+        </p>
+        <p>
+            This has caused concerns from the local indigenous population and reinvigorated movements of sovereignty for the Arctic territory. Many locals call for the need of regulation by Greenlandic people, as to protect against the degradation caused by greedy geopolitical actors. For many decades Greenland has experienced temperate normative ideals which have degraded its land, people, and culture. As Arctic ice continues to melt, this territory and its people will only increase in importance.
+        </p>
+        <small id="citation">
+            For further information:
+            <a href="https://www.dw.com/en/the-battle-over-greenlands-untapped-natural-resources/a-57138809" target="_blank">Deutsche Welle,</a>
+            <a href="https://www.nytimes.com/2021/10/01/business/greenland-minerals-mining.html" target="_blank">NY Times</a>
+        </small>
+    </section>
+    
+    <section id="review">
+        <h3>The Future of Arctic Geopolitics</h3>
+        <p>
+            As one can see, the melting of Arctic Ice has numerous implications across the geopolitical landscape. Open water is creating opportunities in multiple industries such as oil and gas resources and shipping, with further implications appearing in mineral extraction. All of this is putting pressures on geopolitical claims to territories, as countries race to ensure access to the newly open waters. All of this is part of a greater complex global system where changes in our environment carry huge and numerous implications for how we move forward as a society. This should be apparent throughout this article as all of these geopolitical occurrences are because of one thing: climate change. It is important to understand these before moving forward.
+        </p>
+        <img src="arcticcouncilmeetingcanada-635x357.jpg" alt="Delegates attend the Arctic Council ministerial meeting Friday, April 24, 2015 in Iqaluit, Nunavut. Ministers from the eight Arctic nations and the leaders of six Arctic Indigenous groups form the Council." class="responsive" width="500">
+        
+        <small id="citation">
+            Source:
+            <a href="https://www.rcinet.ca/en/2018/01/20/arctic-council-nominated-for-nobel-peace-prize/" target="_blank">RCI</a>
+        </small>
+        <p>
+            If you hope to continue being informed on current geopolitical issues then make sure to follow news sources such as CNN, BBC, and more. Click on the links throughout the article to gain further information on the occurrences within the Arctic. It is also important to acknowledge the many indigenous peoples throughout the Arctic as their voices are often silenced by the countries who ‘possess’ their territory. 
+
+        </p>
+        <small id="citation">
+            Do more research into the Arctic and its Geopolitics:
+            <a href="https://foreignpolicy.com/2020/10/13/arctic-competition-resources-governance-critical-minerals-shipping-climate-change-power-map/" target="_blank">Foreign Policy</a>
+        </small>
+    </section>
+    
+<script>
+    
+    // Map initialization
+    mapboxgl.accessToken = 'pk.eyJ1IjoibWF4aW1qMzMiLCJhIjoiY2xnNWZpdHU0MDJ4djNsbGl3OXE1dDNtaSJ9.7ll-iqYuVLauwXP-hI722A';
+        const map = new mapboxgl.Map({
+            container: 'map',
+            // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+            style: 'mapbox://styles/maximj33/cliakgf9e005s01o81sgg9naf',
+            center: [0,90],
+            zoom: 2,
+            bearing: 27,
+            pitch: 20
+        });
+    
+    // loading up the map
+    map.on('load', function() {
+           map.addLayer({
+            id: 'Owner Data',
+            type: "fill",
+              source: {
+                type: 'vector',
+                url: 'mapbox://styles/maximj33/cliakgf9e005s01o81sgg9naf'  //input your tileset ID url e.g. 'mapbox://jomerson.6ykhlovc' 
+              },
+                'source-layer': 'nic_autoc2023155n_pl_a-3071fq', //input your source layer name e.g. 'Owner-Renter-Pop-ca08iw' - color below determines opacity
+              paint: {
+                     'fill-color': '#ecda9a',
+                     'fill-color': 0.7
+                   }       
+
+            });
+        });
+
+    // This contains camera locations for each chapter
+    const chapters = {
+            'intro': {
+                duration: 6000,
+                bearing: 27,
+                center: [0, 90],
+                zoom: 2,
+                pitch: 20
+            },
+            'arctic': {
+                duration: 6000,
+                center: [0, 90],
+                bearing: 27,
+                zoom: 2.5,
+                pitch: 20
+            },
+            'eez': {
+                duration: 6000,
+                bearing: 25,
+                center: [-100, 82],
+                zoom: 2.5,
+                pitch: 0
+            },
+            'alaska': {
+                duration: 6000,
+                bearing: 27,
+                center: [-155, 70.27739905087613],
+                zoom: 3.7, 
+                pitch: 20
+
+            },
+
+            'canada': {
+                duration: 6000,
+                bearing: 27,
+                center: [-121, 72.0575047648369],
+                zoom: 3,
+                pitch: 20
+            },
+
+            'russia': {
+                duration: 6000,
+                bearing: 20,
+                center: [76, 68],
+                zoom: 2,
+                pitch: 30
+            },
+
+            'greenland': {
+                duration: 6000,
+                bearing: 27,
+                center: [-44, 66],
+                zoom: 3,
+                pitch: 20
+            },
+
+            'review': {
+                duration: 6000,
+                bearing: 27,
+                center: [0, 90],
+                zoom: 2,
+                pitch: 20
+            }
+        };
+
+
+    let activeChapterName = 'alaska';
+    function setActiveChapter(chapterName) {
+        if (chapterName === activeChapterName) return;
+
+        map.flyTo(chapters[chapterName]);
+
+        document.getElementById(chapterName).classList.add('active');
+        document.getElementById(activeChapterName).classList.remove('active');
+
+        activeChapterName = chapterName;
+    }
+
+    function isElementOnScreen(id) {
+        const element = document.getElementById(id);
+        const bounds = element.getBoundingClientRect();
+        return bounds.top < window.innerHeight && bounds.bottom > 0;
+    }
+
+    // On every scroll event, check which element is on screen
+    window.onscroll = () => {
+        for (const chapterName in chapters) {
+            if (isElementOnScreen(chapterName)) {
+                setActiveChapter(chapterName);
+                break;
+            }
+        }
+    };
+    
+    // This contains the java script for legend interaction
+       var state = { panelOpen: true };
+
+      function panelSelect(e){
+        if(state.panelOpen){
+          document.getElementById('descriptionPanel').style.height = '26px';
+          document.getElementById('glyph').className = "chevron glyphicon glyphicon-chevron-up";
+          state.panelOpen = false;
+        } else {
+          document.getElementById('descriptionPanel').style.height = '250px';
+          document.getElementById('glyph').className = "chevron glyphicon glyphicon-chevron-down";
+          state.panelOpen = true;
+        }
+      }
+    
+</script>
+
+</body>
+</html>
